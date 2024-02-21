@@ -21,7 +21,8 @@ app.get('/item', function (req, res) {
 app.get('/item/:id', function (req, res) {
   const id = req.params.id
 
-  res.send(id)
+  const item = lista[id]
+  res.send(item)
 })
 
 app.listen(3000)
